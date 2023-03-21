@@ -11,8 +11,30 @@
 </head>
 
 <body>
-  <header class="header"></header>
-  hello
+
+  <header class="header">
+    <div class="container">
+      <a href="#"><img class="logo" src="/img/Logo.png" alt="Jadoo Logo"></a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#destinations">Destinations</a></li>
+          <li><a class="main-nav-link" href="#hotels">Hotels</a></li>
+          <li><a class="main-nav-link" href="#flights">Flights</a></li>
+          <li><a class="main-nav-link" href="#bookings">Bookings</a></li>
+          <li><a class="main-nav-link" href="#login">Login</a></li>
+          <div class="btn-container">
+            <li><a class="main-nav-link nav-cta" href="#sign-up">Sign up</a></li>
+            <li><a class="main-nav-link lang" href="#lang">EN
+                <ion-icon class="main-nav-icon" name="chevron-down-outline">
+                </ion-icon>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <section class="hero-section"></section>
   </main>
@@ -20,7 +42,9 @@
 
 
 
-
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script src="app.js"></script>
 </body>
 
