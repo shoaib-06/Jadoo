@@ -152,13 +152,14 @@ html body {
   font-size: 1.8rem;
   font-weight: 600;
   color: #5E6282;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 2.4rem;
 }
 
 .heading-secondary {
   font-size: 4.8rem;
   color: #14183E;
+  text-transform: capitalize;
 }
 
 .btn,
@@ -180,19 +181,18 @@ html body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3.2rem;
 }
 .lists .list-item {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 3.2rem;
   line-height: 1.2;
   font-size: 1.8rem;
 }
 .lists .list-item .list-icon {
-  height: 3rem;
-  width: 3rem;
-  color: #e67e22;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 .bg-shape {
@@ -468,26 +468,30 @@ strong {
 .destinations-section {
   padding: 9.6rem 0;
 }
-.destinations-section .card {
+.destinations-section .destinations {
+  position: relative;
+}
+.destinations-section .destinations .card {
   border-radius: 30px;
   overflow: hidden;
   transition: all 0.4s;
+  z-index: 1;
 }
-.destinations-section .card:hover {
+.destinations-section .destinations .card:hover {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.07);
   transform: translateY(-10px);
 }
-.destinations-section .card .card-img-box {
+.destinations-section .destinations .card .card-img-box {
   position: relative;
   z-index: -1;
   border-radius: 30px;
   overflow: hidden;
 }
-.destinations-section .card .card-img-box .card-img {
+.destinations-section .destinations .card .card-img-box .card-img {
   width: 100%;
   display: block;
 }
-.destinations-section .card .card-content {
+.destinations-section .destinations .card .card-content {
   margin-top: -16rem;
   background-color: #fff;
   padding: 3.2rem 3.2rem 4.8rem;
@@ -495,17 +499,79 @@ strong {
   line-height: 1.8;
   font-weight: 500;
 }
-.destinations-section .card .card-content .destination {
+.destinations-section .destinations .card .card-content .destination {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.6rem;
 }
-.destinations-section .card .card-content .duration {
+.destinations-section .destinations .card .card-content .duration {
   display: flex;
   align-items: center;
 }
-.destinations-section .card .card-content .duration .location-icon {
+.destinations-section .destinations .card .card-content .duration .location-icon {
   display: block;
   margin-right: 1.6rem;
   color: #000;
-}/*# sourceMappingURL=style.css.map */
+}
+.destinations-section .destinations .shape-3 {
+  position: absolute;
+  top: 25%;
+  right: -12%;
+  z-index: -1;
+}
+.destinations-section .destinations .shape-3 img {
+  width: 50%;
+  display: block;
+}
+
+/**************************/
+/* BOOKING SECTION */
+/**************************/
+.booking-section {
+  padding: 9.6rem 0;
+}
+.booking-section .booking-text-box {
+  padding-right: 7.2rem;
+}
+.booking-section .booking-text-box .booking-steps {
+  margin-top: 6.4rem;
+}
+.booking-section .booking-text-box .booking-steps .icon-bg-1 {
+  background-color: #F1A501;
+  padding: 1.2rem;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.booking-section .booking-text-box .booking-steps .icon-bg-2 {
+  background-color: #DF6951;
+  padding: 1.2rem;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.booking-section .booking-text-box .booking-steps .icon-bg-3 {
+  background-color: #006380;
+  padding: 1.2rem;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.booking-section .booking-text-box .booking-list-box .booking-heading {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 700;
+}
+.booking-section .booking-text-box .booking-list-box .booking-txt {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-right: 4.8rem;
+}
+.booking-section .booking-img {
+  width: 100%;
+  display: block;
+}
+
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************//*# sourceMappingURL=style.css.map */

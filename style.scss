@@ -177,13 +177,14 @@ html {
   font-size: 1.8rem;
   font-weight: 600;
   color: $primary-color;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 2.4rem;
 }
 
 .heading-secondary {
   font-size: 4.8rem;
   color: $tertiary-color;
+  text-transform: capitalize;
 }
 
 
@@ -208,19 +209,18 @@ html {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3.2rem;
 
   .list-item {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
+    gap: 3.2rem;
     line-height: 1.2;
     font-size: 1.8rem;
 
     .list-icon {
-      height: 3rem;
-      width: 3rem;
-      color: #e67e22;
+      height: 2.4rem;
+      width: 2.4rem;
     }
   }
 }
@@ -544,52 +544,133 @@ strong {
 .destinations-section {
   padding: 9.6rem 0;
 
-  .card {
-    border-radius: 30px;
-    overflow: hidden;
-    transition: all 0.4s;
+  .destinations {
+    position: relative;
 
-    &:hover {
-      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.07);
-      transform: translateY(-10px);
-    }
-
-    .card-img-box {
-      position: relative;
-      z-index: -1;
+    .card {
       border-radius: 30px;
       overflow: hidden;
+      transition: all 0.4s;
+      z-index: 1;
 
-      .card-img {
-        width: 100%;
-        display: block;
+      &:hover {
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.07);
+        transform: translateY(-10px);
+      }
+
+      .card-img-box {
+        position: relative;
+        z-index: -1;
+        border-radius: 30px;
+        overflow: hidden;
+
+        .card-img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .card-content {
+        margin-top: -16rem;
+        background-color: $white-color;
+        padding: 3.2rem 3.2rem 4.8rem;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        font-weight: 500;
+
+        .destination {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.6rem;
+        }
+
+        .duration {
+          display: flex;
+          align-items: center;
+
+          .location-icon {
+            display: block;
+            margin-right: 1.6rem;
+            color: $black-color;
+          }
+        }
       }
     }
 
-    .card-content {
-      margin-top: -16rem;
-      background-color: $white-color;
-      padding: 3.2rem 3.2rem 4.8rem;
-      font-size: 1.8rem;
-      line-height: 1.8;
-      font-weight: 500;
+    .shape-3 {
+      position: absolute;
+      top: 25%;
+      right: -12%;
+      z-index: -1;
 
-      .destination {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1.6rem;
-      }
-
-      .duration {
-        display: flex;
-        align-items: center;
-
-        .location-icon {
-          display: block;
-          margin-right: 1.6rem;
-          color: $black-color;
-        }
+      img {
+        width: 50%;
+        display: block;
       }
     }
   }
 }
+
+
+/**************************/
+/* BOOKING SECTION */
+/**************************/
+
+.booking-section {
+  padding: 9.6rem 0;
+
+  .booking-text-box {
+    padding-right: 7.2rem;
+
+    .booking-steps {
+      margin-top: 6.4rem;
+
+      .icon-bg-1 {
+        background-color: $yellow-color;
+        padding: 1.2rem;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+      }
+
+      .icon-bg-2 {
+        background-color: $orange-color;
+        padding: 1.2rem;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+      }
+
+      .icon-bg-3 {
+        background-color: $cyan;
+        padding: 1.2rem;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .booking-list-box {
+      .booking-heading {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        font-weight: 700;
+      }
+
+      .booking-txt {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        padding-right: 4.8rem;
+      }
+    }
+  }
+
+  .booking-img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
