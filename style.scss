@@ -22,7 +22,8 @@ Paragraph default: 1.6
 - 
 - Tints:
 
-- Shades: 
+- Shades: #d99501
+#c95f49
 
 
 - Accents:
@@ -104,6 +105,8 @@ $yellow-color: #F1A501;
 $orange-color: #DF6951;
 $light-pink: #FFF1DA;
 $cyan: #006380;
+$white-color: #fff;
+$black-color: #000;
 /**************************/
 /* FONT SETTINGS */
 /**************************/
@@ -114,12 +117,14 @@ html {
 
   body {
     font-family: $primary-font;
+    background-color: $white-color;
     color: $primary-color;
     font-weight: 400;
     line-height: 1;
+    position: relative;
+    overflow-x: hidden;
   }
 }
-
 
 /**************************/
 /* GENERAL REUSABLE COMPONENTS */
@@ -163,15 +168,31 @@ html {
 .heading-tertiary {
   font-family: $secondary-font;
   font-weight: 700;
+  line-height: 1.2;
   letter-spacing: -0.5px;
 }
+
+
+.sub-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.heading-secondary {
+  font-size: 4.8rem;
+  color: $tertiary-color;
+}
+
 
 .btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
   text-decoration: none;
-  font-family: inherit;
+  font-family: $tertiary-font;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
@@ -204,6 +225,17 @@ html {
   }
 }
 
+.bg-shape {
+  background: url(/img/bg/bg-shape.svg) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 105vh;
+  position: absolute;
+  top: -4%;
+  right: -51%;
+  z-index: -1;
+}
+
 //HELPER CLASSES
 
 .margin-right-sm {
@@ -216,6 +248,14 @@ html {
 
 .mb-md {
   margin-bottom: 4.8rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 8rem;
+}
+
+.mx-auto {
+  margin: 0 auto;
 }
 
 strong {
@@ -279,7 +319,7 @@ strong {
 
   .main-nav-list {
     display: flex;
-    gap: 6.4rem;
+    gap: 7.2rem;
     align-items: center;
     list-style: none;
 
@@ -295,7 +335,7 @@ strong {
     display: inline-block;
     font-family: $tertiary-font;
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 600;
     color: $nav-color;
     transition: all 0.3s;
 
@@ -310,11 +350,12 @@ strong {
     padding: 1.2rem 2.4rem;
     box-shadow: inset 0 0 0 1px $nav-color;
     border-radius: 7px;
+    border: none;
 
     &:hover,
     &:active {
       background-color: $yellow-color;
-      color: #fff;
+      color: $white-color;
       box-shadow: none;
     }
   }
@@ -338,3 +379,217 @@ strong {
 /**************************/
 /* HERO SECTION */
 /**************************/
+
+.hero-section {
+  position: relative;
+  padding: 8rem 0;
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    position: relative;
+
+    .hero-text-box {
+      .small-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $orange-color;
+        margin-bottom: 2.4rem;
+      }
+
+      .heading-primary {
+        font-family: $secondary-font;
+        font-size: 8rem;
+        color: $secondary-color;
+        margin-bottom: 3.2rem;
+      }
+
+      .texture {
+        position: absolute;
+        top: 19%;
+        left: 21%;
+        z-index: -1;
+
+        .bg-texture {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .hero-description {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        padding-right: 9.6rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .btn-container {
+        display: flex;
+        align-items: center;
+
+        .btn--full:link,
+        .btn--full:visited {
+          background-color: $yellow-color;
+          color: $white-color;
+          border: none;
+
+          &:hover,
+          &:active {
+            background-color: #d99501;
+          }
+        }
+
+        .btn--play {
+          display: inline-flex;
+          align-items: center;
+          font-size: 1.8rem;
+          color: #686D77;
+
+
+          .play {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            background-color: $orange-color;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: #c95f49;
+            }
+
+            .play-icon {
+              color: $white-color;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-img-box {
+      margin-top: -8rem;
+      margin-left: -2.4rem;
+
+      .hero-img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+/**************************/
+/* SERVICES SECTION */
+/**************************/
+
+.services-section {
+  padding: 0 0 9.6rem;
+
+  .services {
+    position: relative;
+
+    .service-card {
+      text-align: center;
+      transition: all 0.4s;
+      padding: 2.4rem 0 3.6rem;
+      border-radius: 30px;
+      background-color: white;
+
+      &:hover {
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.05);
+        transform: translateY(-10px);
+      }
+
+      .service-img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .service-heading {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2.4rem;
+      }
+
+      .service-txt {
+        padding: 0 4rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+    }
+
+    .shape-2 {
+      position: absolute;
+      top: 80%;
+      left: 25%;
+      z-index: -1;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/**************************/
+/* DESTINATIONS SECTION */
+/**************************/
+
+.destinations-section {
+  padding: 9.6rem 0;
+
+  .card {
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    &:hover {
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.07);
+      transform: translateY(-10px);
+    }
+
+    .card-img-box {
+      position: relative;
+      z-index: -1;
+      border-radius: 30px;
+      overflow: hidden;
+
+      .card-img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card-content {
+      margin-top: -16rem;
+      background-color: $white-color;
+      padding: 3.2rem 3.2rem 4.8rem;
+      font-size: 1.8rem;
+      line-height: 1.8;
+      font-weight: 500;
+
+      .destination {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+      }
+
+      .duration {
+        display: flex;
+        align-items: center;
+
+        .location-icon {
+          display: block;
+          margin-right: 1.6rem;
+          color: $black-color;
+        }
+      }
+    }
+  }
+}
