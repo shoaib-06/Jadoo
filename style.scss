@@ -500,7 +500,7 @@ strong {
 /**************************/
 
 .services-section {
-  padding: 0 0 9.6rem;
+  padding: 4.8rem 0 9.6rem;
 
   .services {
     position: relative;
@@ -1005,5 +1005,31 @@ strong {
   .copyright {
     font-size: 1.4rem;
     color: $primary-color;
+  }
+}
+
+
+/********** MEDIA QUERIES **********/
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1400px (Smaller Screens) */
+/**************************/
+
+@media only screen and (max-width: 1399px) {
+
+  .bg-shape {
+    top: -3.5%;
+    right: -43%;
+  }
+
+  .texture {
+    top: 17% !important;
+    left: 24% !important;
+  }
+
+  .services.grid {
+    column-gap: 3.2rem;
   }
 }
